@@ -1,0 +1,28 @@
+.info {
+    background-color: #2962ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chart {
+    flex: 7;
+}
+
+.form {
+    flex: 3;
+}

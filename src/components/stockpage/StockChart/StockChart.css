@@ -1,0 +1,47 @@
+.stock-chart {
+    margin: 20px 0;
+    /* padding: 20px; */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    /* width: 65%; */
+  }
+  
+.charttitle {
+  background-color: #2962ff;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 20px;
+  border-radius: 5px 5px 0 0;
+  height: 70px;
+  padding: 20px 10px 10px 30px ;
+  margin-bottom: 20px;
+  /* text-align: center; */
+
+}
+
+  .chart-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .chart-controls button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chart-controls button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .chart-controls button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+  }

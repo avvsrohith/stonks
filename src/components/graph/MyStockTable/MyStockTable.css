@@ -1,0 +1,39 @@
+.table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+
+.table th{
+    border: 1px solid #0d0101;
+    padding: 8px;
+    text-align: center;
+    background-color: #e4a4f6;
+    font-weight: bold;
+}
+
+.table td{
+    border: 1px solid #0d0101;
+    padding: 8px;
+    text-align: left;
+}
+
+.table tr:hover{
+    background-color: #98e7be;
+}
+
+.profit {
+    
+    background-color: green;
+}
+
+.loss {
+    background-color: red;
+}
+
+.neutral {
+    background-color: black;
+}
+
+#lp{
+    color: aliceblue;
+}

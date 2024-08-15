@@ -1,0 +1,43 @@
+.cardcol {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    background-color: #2962ff;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+.whitedivider {
+    height: 1px;
+    background-color: aliceblue;
+    width: 40%;
+    margin: 10px;
+}
+
+.smoltxt {
+    font-size: smaller;
+    margin: 5px 5px 2px 5px ;
+}
+
+.moneytxt {
+    font-size: 25px;
+    margin: 0px 5px 5px 5px ;
+}
+
+.currenttxt {
+    font-size: 25px;
+    margin: 0px;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px;
+}

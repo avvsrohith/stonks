@@ -1,0 +1,26 @@
+.stock-search {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stock-search-input {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 60%;
+  }
+  
+  .stock-search-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .stock-search-button:hover {
+    background-color: #0056b3;
+  }

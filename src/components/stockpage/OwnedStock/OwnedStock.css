@@ -1,0 +1,61 @@
+.StockContainer {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    width: 0.25vw;
+}
+
+.stockCard {
+    width: 22vw;
+}
+
+.stockName {
+    background-color: #2962ff;
+    color: aliceblue;
+    font-size: 1.5em;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    padding: 15px 15px 15px 28px;
+}
+
+.rowflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftflex {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.rightflex {
+    flex: 1;
+    padding: 10px;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.selector {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+
+.horizontalDivider {
+    height: 1px;
+}
+
+.sellbtn {
+    border: none;
+    width: 90%;
+    margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust column count here */
+    grid-gap: 10px; /* Optional gap between items */
+  }
