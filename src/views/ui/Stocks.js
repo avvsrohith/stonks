@@ -44,9 +44,9 @@ const StocksPage=()=>{
     return <div className="error-message">{error}</div>;
   }
 
-  if (!stockData || !companyProfile) {
-    return <div>Loading...</div>;
-  }
+  // if (!stockData || !companyProfile) {
+  //   return <div>Loading...</div>;
+  // }
 
     return (
         <div>

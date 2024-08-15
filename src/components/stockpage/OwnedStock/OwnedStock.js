@@ -2,11 +2,13 @@ import React, { useState,useEffect } from "react";
 import { Card,Button } from "reactstrap";
 import { getStockQuote,getCompanyProfile } from "../../../api/finnhub";
 import "./OwnedStock.css";
+import { deleteStock,fetchData } from "../../../api/api";
 
-const OwnedStock = (stock) => {
+const OwnedStock = ({stock,alterData}) => {
   const [quantity, setQuantity] = useState(1);
   const [currentPrice,setCurrentPrice] = useState(stock.buyprice)
   const [error, setError] = useState(null);
+  const [data,setData] = useState(null);
 
 
   useEffect(() => {
@@ -30,6 +32,17 @@ const OwnedStock = (stock) => {
 
     fetchStockData();
   }, [stock]);
+
+  const handleDelete = async(index) => {
+    try{
+      const newData = await deleteStock(index);
+      const res = await fetchData();
+      alterData(res);
+    }
+    catch(error){
+      setError(error.message);
+    }
+};
 
   stock = stock.stock;
   return (
@@ -72,7 +85,7 @@ const OwnedStock = (stock) => {
         </div>
 
         <div className="rowflex">
-        <Button className="sellbtn" color="success">
+        <Button className="sellbtn" color="success" onClick={handleDelete}>
         Sell for ${((currentPrice-stock.buyPrice) * quantity).toFixed(2)} profit
                 </Button>
                 

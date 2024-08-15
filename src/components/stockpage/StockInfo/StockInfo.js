@@ -1,10 +1,9 @@
 import { Card } from "reactstrap"
 import './StockInfo.css'
 
-const StockInfo=({data,profile})=>{
+const StockInfo=({data,symbol})=>{
 
 
-    console.log(profile);
     
     return (
         <Card>
@@ -12,8 +11,7 @@ const StockInfo=({data,profile})=>{
           <div className="info">
             <div className="cardcol">
               <div className="title">
-                {profile}
-                {/* AAPL */}
+                {symbol}
               </div>
               <div className="smoltxt">
                 Current price

@@ -15,28 +15,34 @@ const StockCard = () => {
   const [stockData, setStockData] = useState(null);
   const [companyProfile, setCompanyProfile] = useState(null);
   const [error, setError] = useState(null);
+  const [loaded,setLoaded] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-  const symbol= searchParams.get('symbol')
+  const symbol= searchParams.get('symbol');
   
 
   useEffect(() => {
+    
     const fetchStockData = async () => {
       try {
-        const [quote, profile] = await Promise.all([
-          getStockQuote(symbol),
-          getCompanyProfile(symbol)
-        ]);
-
+        // const [quote, profile] = await Promise.all([
+        //   getStockQuote(symbol),
+        //   getCompanyProfile(symbol)
+        // ]);
+        if(!symbol) return;
+        const quote=await getStockQuote(symbol);
         setStockData(quote);
-        console.log(profile);
+        // console.log(typeof(quote));
+    
         
-        
-        setCompanyProfile(profile);
+
+  
+        // setCompanyProfile(profile);
         setError(null);
       } catch (error) {
         console.error('Error fetching stock data:', error);
         setError('Failed to fetch stock data. Please try again later.');
       }
+      
     };
 
     fetchStockData();
@@ -46,17 +52,19 @@ const StockCard = () => {
     return <div className="error-message">{error}</div>;
   }
 
-  if (!stockData || !companyProfile) {
-    return <div>Loading...</div>;
-  }
+  // if (!stockData) {
+  //   return <div>Loading...</div>;
+  // }
+
+
 
 
   return (
     <div>
       <StockSearch className="searchcont"></StockSearch>
-      {symbol && stockData && companyProfile && 
+      {stockData && symbol &&
         <div>
-          <StockInfo data={stockData} profile={symbol} ></StockInfo>
+          <StockInfo data={stockData} symbol={symbol}  ></StockInfo>
           <Row>
         <Col sm="6" lg="6" xl="7" xxl="8">
         <StockChart className="chart" symbol={symbol}></StockChart>

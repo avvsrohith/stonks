@@ -16,7 +16,9 @@ function BuySellForm({ symbol, currentPrice }) {
       symbol,
       date: new Date().toISOString(), 
       volume: Number(quantity),                
-      buyPrice: parseFloat(currentPrice)
+      buyPrice: parseFloat(currentPrice),
+      sellPrice: parseFloat(currentPrice),
+      stockid: symbol
     };
   
     try {

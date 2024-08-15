@@ -80,6 +80,10 @@ const MyStocksPage=()=>{
       }
   };
 
+  const alterData = (newData)=>{
+    data=newData;
+  }
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
 
@@ -93,7 +97,7 @@ const MyStocksPage=()=>{
       </Card>
             <div className="grid-container">
             {data.map((stock, index) => (
-              <OwnedStock stock={stock} />
+              <OwnedStock stock={stock} alter={alterData}/>
             ))}
                   </div>
         </div>
